@@ -59,6 +59,7 @@ spec:
       - name: oauth-proxy
         args:
           - --https-address=:8443
+          - --http-address=:8180
           - --provider=openshift
           - --upstream=http://localhost:8080
           - --tls-cert=/etc/tls/private/tls.crt
@@ -75,6 +76,8 @@ spec:
         ports:
           - containerPort: 8443
             name: https
+          - containerPort: 4180
+            name: http
         livenessProbe:
           httpGet:
             path: /oauth/healthz

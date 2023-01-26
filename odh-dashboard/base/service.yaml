@@ -8,6 +8,11 @@ spec:
   selector:
     deployment: odh-dashboard
   ports:
-  - protocol: TCP
+  - name: https
+    protocol: TCP
     targetPort: 8443
     port: 8443
+  - name: http
+    protocol: TCP
+    targetPort: 8180
+    port: 8180
