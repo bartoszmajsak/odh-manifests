@@ -161,7 +161,8 @@ rules:
   verbs:
   - get
   - list
-  - watch
+  - update
+      - watch
 - apiGroups:
   - serving.kserve.io
   resources:
