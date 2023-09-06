@@ -162,7 +162,7 @@ rules:
   - get
   - list
   - update
-      - watch
+  - watch
 - apiGroups:
   - serving.kserve.io
   resources:
